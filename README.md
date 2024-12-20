@@ -28,7 +28,7 @@ Este site foi criado para reunir:
 
 ## 🚀 Tecnologias Utilizadas  
 Este projeto está sendo desenvolvido com:  
-- **React JS** e **CSS Modules** para estrutura e estilo.  
+- **React JS** e **CSS3** para estrutura e estilo.  
 - **PHP** em breve para o backend.
 - **MySQL** *em breve para o banco*.
 
