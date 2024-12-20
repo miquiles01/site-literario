@@ -1,5 +1,5 @@
 # Leituras da Thali ✨️  
-**Site e blog inspirado no meu Instagram literário**  
+**Site inspirado no meu Instagram literário**  
 
 Bem-vindos ao meu projeto! </br>
 Este site é uma extensão do meu Instagram, onde compartilho minhas leituras e inspirações. 📚💖  
@@ -27,7 +27,7 @@ Este site foi criado para reunir:
 ---
 
 ## 🚀 Tecnologias Utilizadas  
-Este projeto está desenvolvido com:  
+Este projeto está sendo desenvolvido com:  
 - **React JS** e **CSS Modules** para estrutura e estilo.  
 - **PHP** em breve para o backend.
 - **MySQL** *em breve para o banco*.
