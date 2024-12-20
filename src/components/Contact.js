@@ -1,22 +1,18 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
 
-  // Função para lidar com o envio do formulário
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     setLoading(true);
-    setError(null);
-    setSuccess(null);
 
     const formData = {
       name,
@@ -25,15 +21,18 @@ function Contact() {
     };
 
     try {
-      const response = await axios.post('https://sua-api.com/contato', formData);
-      
+      const response = await axios.post('', formData);
+
       if (response.status === 200) {
-        setSuccess('Mensagem enviada com sucesso!'); // Exibe mensagem de sucesso
+        toast.success('Mensagem enviada com sucesso!');
+        setName('');
+        setEmail('');
+        setMessage('');
       }
     } catch (err) {
-      setError('Ocorreu um erro ao enviar a mensagem. Tente novamente.');
+      toast.error('Ocorreu um erro ao enviar a mensagem. Tente novamente.');
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
@@ -41,9 +40,15 @@ function Contact() {
     <section id="contact" className="contact-section">
       <div className="container">
         <h2>Contato</h2>
-        <p>Gostaria de <strong>firmar parceira</strong> ou entrar em contato comigo? Preencha o formulário abaixo ou envie um e-mail para: <a href="mailto:bookstan.emvelaris@gmail.com">bookstan.emvelaris@gmail.com</a></p>
-        
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <p>
+          Gostaria de <strong>firmar parceira</strong> ou entrar em contato
+          comigo? Preencha o formulário abaixo ou envie um e-mail para:{' '}
+          <a href="mailto:bookstan.emvelaris@gmail.com">
+            bookstan.emvelaris@gmail.com
+          </a>
+        </p>
+
+        <form method='POST' className="contact-form" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Nome"
@@ -69,8 +74,7 @@ function Contact() {
           </button>
         </form>
 
-        {error && <div className="error-message">{error}</div>}
-        {success && <div className="success-message">{success}</div>}
+        <ToastContainer position="top-right" autoClose={2000} />
       </div>
     </section>
   );
