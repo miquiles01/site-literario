@@ -10,7 +10,7 @@ function About() {
       <img src={icon} alt="thali" />
       <div className="text-content">
           <h2>Sobre Mim</h2>
-          <p>Olá, tudo bem? Meu nome é Thalita e sou uma apaixonada por literatura, sempre à procura de novas histórias para me inspirar. Este blog é uma maneira de compartilhar minhas experiências de leitura com o mundo.</p>
+          <p>Olá, tudo bem? Meu nome é Thalita e sou uma apaixonada por literatura, sempre à procura de novas histórias para me inspirar. Este site é uma maneira de compartilhar minhas experiências de leitura com o mundo.</p>
         </div>
       </div>
     </section>

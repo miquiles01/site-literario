@@ -81,7 +81,7 @@ function Books() {
           </div>
         </div>
         <div className="view-more">
-          <p><a href="lidos.html">Ver mais livros</a></p>
+          <p><a href="#intro">Ver mais livros</a></p>
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ function Contact() {
     };
 
     try {
-      const response = await axios.post('', formData);
+      const response = await axios.post('http://localhost/request/contact.php', formData);
 
       if (response.status === 200) {
         toast.success('Mensagem enviada com sucesso!');

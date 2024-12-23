@@ -153,7 +153,6 @@ section {
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    /* Ajusta a largura mínima das colunas */
     gap: 20px;
     max-width: 1200px;
     margin: auto;
@@ -301,5 +300,33 @@ section {
     .intro-section p {
         font-size: 16px;
         padding: 1rem;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .about-section .container {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px;
+    }
+
+    .about-section img {
+        margin: 0 0 20px 0; 
+        max-width: 60%; 
+        height: auto; 
+    }
+
+    .about-section h2,
+    .about-section p {
+        text-align: center; 
+    }
+    .footer{
+        padding: 1rem 0;
+        font-size: 12px;
     }
 }
