@@ -13,72 +13,34 @@ import livro10 from '../assets/livro10.jpg';
 import livro11 from '../assets/livro11.jpg';
 import livro12 from '../assets/livro12.jpg';
 
+const books = [
+  { img: livro1, rating: '⭐⭐⭐⭐⭐+❤️', review: 'Ai gente, eu amei.' },
+  { img: livro2, rating: '⭐⭐⭐⭐⭐', review: 'Como pode um conto de 22 páginas me fazer surtar tanto??' },
+  { img: livro3, rating: '⭐⭐⭐⭐⭐', review: 'É curtinho, muito bom.' },
+  { img: livro4, rating: '⭐⭐⭐', review: 'Não sei se gostei muito.' },
+  { img: livro5, rating: '⭐⭐', review: 'Primeiro livro da Olivia que eu não gosto kkk' },
+  { img: livro6, rating: '⭐⭐⭐⭐', review: 'A Aly nunca decepciona.' },
+  { img: livro7, rating: '⭐⭐⭐⭐', review: 'Amoooooooooo' },
+  { img: livro8, rating: '⭐⭐⭐⭐', review: 'Eles se completam tantooo' },
+  { img: livro9, rating: '⭐⭐⭐⭐⭐', review: 'Amo todos os livros da Stef' },
+  { img: livro10, rating: '⭐⭐⭐⭐⭐', review: 'O Dan é um querido.' },
+  { img: livro11, rating: '⭐⭐⭐', review: 'Muito bom ler e fazer as expressões da Bella do filme HAHAHA' },
+  { img: livro12, rating: '⭐⭐', review: 'Gostei não kkk' },
+];
+
 function Books() {
   return (
     <section id="books" className="books-section">
       <div className="container">
         <h2>Livros Lidos em 2024 📚</h2>
         <div className="book-grid">
-          <div className="book-item">
-            <img src={livro1} alt="livro1" />
-            <strong>⭐⭐⭐⭐⭐+❤️</strong>
-            <p>Ai gente, eu amei.</p>
-          </div>
-          <div className="book-item">
-            <img src={livro2} alt="livro2" />
-            <strong>⭐⭐⭐⭐⭐</strong>
-            <p>Como pode um conto de 22 páginas me fazer surtar tanto??</p>
+          {books.map((book, index) => (
+            <div key={index} className="book-item">
+              <img src={book.img} alt={`Livro ${index + 1}`} />
+              <strong>{book.rating}</strong>
+              <p>{book.review}</p>
             </div>
-          <div className="book-item">
-            <img src={livro3} alt="livro3" />
-            <strong>⭐⭐⭐⭐⭐</strong>
-            <p>É curtinho, muito bom.</p>
-            </div>
-          <div className="book-item">
-            <img src={livro4} alt="livro4" />
-            <strong>⭐⭐⭐</strong>
-            <p>Não sei se gostei muito.</p>
-            </div>
-          <div className="book-item">
-            <img src={livro5} alt="livro5" />
-            <strong>⭐⭐</strong>
-            <p>Primeiro livro da Olivia que eu não gosto kkk</p>
-            </div>
-          <div className="book-item">
-            <img src={livro6} alt="livro6" />
-            <strong>⭐⭐⭐⭐</strong>
-            <p>A Aly nunca decepciona.</p>
-            </div>
-          <div className="book-item">
-            <img src={livro7} alt="livro7" />
-            <strong>⭐⭐⭐⭐</strong>
-            <p>Amoooooooooo</p>
-            </div>
-          <div className="book-item">
-            <img src={livro8} alt="livro8" />
-            <strong>⭐⭐⭐⭐</strong>
-            <p>Eles se completam tantooo</p>
-            </div>
-          <div className="book-item">
-            <img src={livro9} alt="livro9" />
-            <strong>⭐⭐⭐⭐⭐</strong>
-            <p>Amo todos os livros da Stef</p>
-            </div>
-          <div className="book-item">
-            <img src={livro10} alt="livro10" />
-            <strong>⭐⭐⭐⭐⭐</strong>
-            <p>O Dan é um querido.</p>
-            </div>
-          <div className="book-item">
-            <img src={livro11} alt="livro11" />
-            <strong>⭐⭐⭐</strong>
-            <p>Muito bom ler e fazer as expressões da Bella do filme HAHAHA</p>
-            </div>
-          <div className="book-item">
-            <img src={livro12} alt="livro12" />
-            <strong>⭐⭐</strong>
-            <p>Gostei não kkk</p>
-          </div>
+          ))}
         </div>
         <div className="view-more">
           <p><a href="#intro">Ver mais livros</a></p>

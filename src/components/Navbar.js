@@ -16,7 +16,6 @@ function Navbar() {
             <li><a href="#about">Sobre</a></li>
             <li><a href="#books">Lidos 2024</a></li>
             <li><a href="#contact">Contato</a></li>
-            <li><a href="./blog/index.html" target="_blank" rel="noopener noreferrer">Blog</a></li>
           </ul>
         </nav>
       </div>
