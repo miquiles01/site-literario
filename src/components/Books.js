@@ -4,7 +4,6 @@ import livro1 from '../assets/livro1.jpg';
 import livro2 from '../assets/livro2.jpg';
 import livro3 from '../assets/livro3.jpg';
 import livro4 from '../assets/livro4.jpg';
-import livro5 from '../assets/livro5.jpg';
 import livro6 from '../assets/livro6.jpg';
 import livro7 from '../assets/livro7.jpg';
 import livro8 from '../assets/livro8.jpg';
@@ -18,7 +17,6 @@ const books = [
   { img: livro2, rating: '⭐⭐⭐⭐⭐', review: 'Como pode um conto de 22 páginas me fazer surtar tanto??' },
   { img: livro3, rating: '⭐⭐⭐⭐⭐', review: 'É curtinho, muito bom.' },
   { img: livro4, rating: '⭐⭐⭐', review: 'Não sei se gostei muito.' },
-  { img: livro5, rating: '⭐⭐', review: 'Primeiro livro da Olivia que eu não gosto kkk' },
   { img: livro6, rating: '⭐⭐⭐⭐', review: 'A Aly nunca decepciona.' },
   { img: livro7, rating: '⭐⭐⭐⭐', review: 'Amoooooooooo' },
   { img: livro8, rating: '⭐⭐⭐⭐', review: 'Eles se completam tantooo' },
